@@ -1,22 +1,3 @@
-/* 
-   Analysis: Average Salary of Data Analyst Roles in each major city (2023)
-   Scope: Dallas–Fort Worth Metroplex 
-          - Dallas, Fort Worth, Arlington, Plano, Irving,
-            Garland, Frisco, McKinney, Denton, Grand Prairie, 
-            Richardson, Carrollton, Lewisville, Allen, Grapevine
-
-   - Analyze the average annual salary for Data Analyst roles
-     for each major cities in the DFW metroplex.
-   - Exclude job postings without salary data to ensure
-     accurate and reliable salary insights.
-
-   Objective:
-   Provide a clear view of compensation trends across DFW cities,
-   helping identify which locations offer higher average pay for
-   Data Analyst positions in 2023.
-*/
-
-
 WITH dallas_top15 AS (
     SELECT * FROM (VALUES
         ('Dallas, TX'), ('Fort Worth, TX'), ('Arlington, TX'), ('Plano, TX'),
