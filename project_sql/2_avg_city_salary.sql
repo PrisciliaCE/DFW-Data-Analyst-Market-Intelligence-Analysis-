@@ -7,23 +7,21 @@ WITH dallas_top15 AS (
     ) AS t(city)
 ),
 
+
 dfw_data_analyst AS (
-    SELECT *
+    SELECT *    
     FROM job_postings_fact jp
     INNER JOIN dallas_top15 d15 ON jp.job_location = d15.city
-    INNER JOIN skills_job_dim sjd ON sjd.job_id = jp.job_id
     WHERE jp.job_title_short = 'Data Analyst' 
       AND salary_year_avg IS NOT NULL
 )
 
-SELECT 
-    s.skill_id,
-    s.skills AS skill_name,
-    COUNT(*) AS skill_count
-FROM dfw_data_analyst d
-INNER JOIN skills_dim s ON s.skill_id = d.skill_id
-GROUP BY s.skill_id, s.skills
-ORDER BY skill_count DESC
-LIMIT 5;
 
-
+-- Average salary in each city
+SELECT
+    job_location AS City,
+    ROUND(AVG(salary_year_avg), 2) as Avg_salary,
+    COUNT(job_location) AS Number_of_jobs
+FROM dfw_data_analyst
+GROUP BY job_location
+ORDER BY Avg_salary DESC;

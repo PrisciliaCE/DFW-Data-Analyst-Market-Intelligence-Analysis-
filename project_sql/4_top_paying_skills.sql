@@ -6,23 +6,23 @@ WITH dallas_top15 AS (
         ('Lewisville, TX'), ('Allen, TX'), ('Grapevine, TX')
     ) AS t(city)
 ),
+
 dfw_data_analyst AS (
-    SELECT *    
-    FROM
-        job_postings_fact jp
+    SELECT *
+    FROM job_postings_fact jp
     INNER JOIN dallas_top15 d15 ON jp.job_location = d15.city
-    WHERE
-        jp.job_title_short = 'Data Analyst' AND 
-        salary_year_avg IS NOT NULL
+    INNER JOIN skills_job_dim sjd ON sjd.job_id = jp.job_id
+    WHERE jp.job_title_short = 'Data Analyst' 
+      AND salary_year_avg IS NOT NULL
 )
 
+SELECT 
+    s.skill_id,
+    s.skills AS skill_name,
+    ROUND(AVG(salary_year_avg), 0) AS Avg_salary
+FROM dfw_data_analyst d
+INNER JOIN skills_dim s ON s.skill_id = d.skill_id
+GROUP BY s.skill_id, s.skills
+ORDER BY Avg_salary DESC
+LIMIT 10;
 
--- Average salary in each city
-SELECT
-    job_location AS City,
-    ROUND(AVG(salary_year_avg), 2) as Avg_salary,
-    COUNT(job_location) AS Number_of_jobs
-FROM 
-    dfw_data_analyst
-GROUP BY job_location
-ORDER BY Avg_salary DESC;
