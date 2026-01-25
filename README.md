@@ -18,16 +18,18 @@
 # Key Findings
 ## 1. Salary Insights
 - The top paying roles are managerial and senior level analyst positions (~130k - $185k)
-- Top paying cities (few postings) averages: Grapevine ($125k), Carollton ($120k), and Lewisville ($115k)
+- Top paying cities (few postings) averages: Grapevine ($125k), Carrollton ($120k), and Lewisville ($115k)
 - High postings cities average: Dallas, Plano, and Irving (~$92k-$106k)
 - The high paying Data Anaylst roles in the DFW are mostly financial institutions (Citi, JP Morgan, and Renuity) and big tech companies (Hitachi, Vantara, AT&T, and Cisco) 
 ## 2. Skill Insights
 #### Most In-Demand Skills
-1. SQL (131 postings)
-2. Excel (74)
-3. Python (66)
-4. Tableau (59)
-5. Power Bi (47)
+| Skill    | Number of Postings |
+|----------|-------------------:|
+| SQL      | 131 |
+| Excel    | 74  |
+| Python   | 66  |
+| Tableau  | 59  |
+| Power BI | 47  |
 
 #### Top Paying Skills
 1. MySQL, Pyspark, Node.js, Kafka, and GCP (~$138k - $147k) 
@@ -50,24 +52,22 @@
     - October through December (7-12 postings)
 
 #### Quarterly 
-- Q1 (Jan-Mar): 61 postings
-- Q2 (Apr-Jun): 60 postings
-- Q3 (Jul-Sep): 53 postings
-- Q4 (Oct-Dec): 30 postings
+| Quarter | Months        | Number of Postings |
+|--------:|---------------|-------------------:|
+| Q1      | Jan – Mar     | 61 |
+| Q2      | Apr – Jun     | 60 |
+| Q3      | Jul – Sep     | 53 |
+| Q4      | Oct – Dec     | 30 |
 
 💡 The best time to apply is between __Q1 and Q2__, when job postings are most abundant. __Q4__ tends to have fewer postings, but also less competition, as it coincides with the holiday season.
 ## 4. Location Insight
 💡 Apply broadly in Dallas, Plano, and Irving for a high volume of job postings with competitive pay. For high-paying, specialized roles, focus on Carrollton, Grapevine, and Lewisville.
 ## 5. Role and Career Insights
-1. Leadership / Managerial Roles 
-    - Average Salary: $150k - $185k
-    - Cloud, Analytics, Project Management experience
-2. Senior Analyst
-    - Average Salary: $110k - $150k
-    - SQL, Python, Visualization, Cloud
-3. Standard Analyst
-    - Average Salary: ~$32k - $110k
-    - Entry-Level, Junior, and Mid-Level roles
+| Role Level                    | Average Salary        | Typical Requirements / Experience |
+|------------------------------|-----------------------|-----------------------------------|
+| Leadership / Managerial Roles | $150k – $185k         | Cloud, Analytics, Project Management |
+| Senior Analyst                | $110k – $150k         | SQL, Python, Data Visualization, Cloud |
+| Standard Analyst              | ~$32k – $110k         | Entry-Level, Junior, and Mid-Level roles |
 
 💡Goal: Progress from Entry Level --> Mid Level --> Senior Level --> Manager/Director roles for max salary
 
