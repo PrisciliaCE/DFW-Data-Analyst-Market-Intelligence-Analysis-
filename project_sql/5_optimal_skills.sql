@@ -1,19 +1,3 @@
-/*
-Analysis: Top In-Demand and High-Paying Skills for Data Analyst Roles (2023)
-Scope: Dallas–Fort Worth Metroplex
-
-Methodology:
-- Filter job postings to Data Analyst roles in selected DFW cities with valid salary data.
-- Join job postings with associated skills.
-- Identify skills that appear in more than 10 postings to focus on in-demand competencies.
-- Calculate the average salary for each skill.
-- Combine demand and salary data to highlight skills that are both frequently required and linked to higher compensation.
-
-Objective:
-Provide insights on the top 15 skills that offer a combination of high demand and high pay for Data Analysts,
-guiding skill development and career planning in the DFW job market.
-*/
-
 WITH dallas_top15 AS (
     SELECT * FROM (VALUES
         ('Dallas, TX'), ('Fort Worth, TX'), ('Arlington, TX'), ('Plano, TX'),
@@ -60,4 +44,4 @@ SELECT
 FROM skills_demand sd
 INNER JOIN skills_salary ss ON sd.skill_id = ss.skill_id
 ORDER BY ss.avg_salary DESC, sd.skill_count DESC
-LIMIT 15;
+LIMIT 16;

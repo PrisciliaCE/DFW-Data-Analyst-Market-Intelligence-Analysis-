@@ -1,19 +1,3 @@
-/*
-Analysis: Average Data Analyst Salaries by City (2023)
-Scope: Dallas–Fort Worth Metroplex
-
-Methodology:
-- Filter job postings to Data Analyst roles within selected DFW cities.
-- Exclude postings without salary data to ensure accurate averages.
-- Aggregate salary data by city to calculate:
-    • Average annual salary
-    • Total number of job postings per city
-
-Objective:
-Compare Data Analyst compensation across DFW cities to identify
-locations with higher average salaries and stronger job availability.
-*/
-
 WITH dallas_top15 AS (
     SELECT * FROM (VALUES
         ('Dallas, TX'), ('Fort Worth, TX'), ('Arlington, TX'), ('Plano, TX'),

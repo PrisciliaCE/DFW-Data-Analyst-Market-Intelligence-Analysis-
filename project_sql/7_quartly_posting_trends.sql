@@ -1,18 +1,3 @@
-/*
-Analysis: Quarterly Data Analyst Job Postings (2023)
-Scope: Dallas–Fort Worth Metroplex
-
-Methodology:
-- Filter job postings to Data Analyst roles in selected DFW cities with valid salary data.
-- Restrict postings to the year 2023.
-- Aggregate postings by quarter using EXTRACT(QUARTER) and format as 'Q1', 'Q2', etc.
-- Count the number of postings per quarter to identify trends over the year.
-
-Objective:
-Track the quarterly distribution of Data Analyst job postings in DFW during 2023
-to highlight hiring trends and seasonal patterns in the job market.
-*/
-
 WITH dallas_top15 AS (
     SELECT * FROM (VALUES
         ('Dallas, TX'), ('Fort Worth, TX'), ('Arlington, TX'), ('Plano, TX'),
